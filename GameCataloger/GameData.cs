@@ -45,7 +45,7 @@ public class GameData
             Instance = (GameData)Serializer.Deserialize(ReadFileStream);
             ReadFileStream.Close();
         }
-        catch (Exception e)
+        catch (Exception)
         {
             Instance = new GameData();
 
@@ -64,7 +64,7 @@ public class GameData
             Serializer.Serialize(WriteFileStream, Instance);
             WriteFileStream.Close();
         }
-        catch (Exception e)
+        catch (Exception)
         {
             return false;
         }
